@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .header, .footer{
+            border: 2px solid #E4CE8F;
+            background: #FFF2CC;
+            text-align: center;
+            padding: 20px;
+        }
+        .intro{
+            background-color: #D5E8D4;
+            border: 2px solid #92BC7A;
+            padding: 30px;
+            text-align: center;
+        }
+        .features-container{
+            display: flex;
+            justify-content: space-between;
+        }
+        .features{
+            background-color: #F8CECC;
+            border: 2px solid #BA5955;
+            width: 14%;
+            padding: 30px;
+        }
+
+        .others-container{
+            display: flex;
+            justify-content: space-around;
+            gap: 13px;
+        }
+        .img, .login{
+            background-color: #FFFF88;
+            border: 2px solid #999B9D;
+        }
+        .img{
+            width: 29%;
+            padding: 62px;
+        }
+        .login{
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="intro">Intro</div>
+        <div class="features-container">
+            <div class="features">Feature 1</div>
+            <div class="features">Feature 2</div>
+            <div class="features">Feature 3</div>
+            <div class="features">Feature 4</div>
+            <div class="features">Feature 5</div>
+        </div>
+        <div class="others-container">
+            <div class="img">Image 1</div>
+            <div class="login">Login Form</div>
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .navigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #333;
+        padding: 12px 16px;
+      }
+
+      h2.logo {
+        color: #ffffff;
+        font-weight: bolder;
+      }
+
+      a.page {
+        color: #fff;
+        text-decoration: none;
+        margin: 0px 12px;
+      }
+
+      .content-page {
+        padding: 20px;
+      }
+
+      @media (max-width: 576px){
+        .pages{
+            display: none
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navigation">
+        <h2 class="logo">Logo</h2>
+        <div class="pages">
+          <a href="#home" class="page"> Home </a>
+          <a href="#about" class="page"> About </a>
+          <a href="#services" class="page"> Services </a>
+          <a href="#contact" class="page"> Contact </a>
+        </div>
+      </div>
+      <div class="content-page">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id nemo quae
+          accusamus iste numquam libero facilis possimus dicta, suscipit
+          mollitia nobis nesciunt earum quod at velit nisi, dignissimos
+          molestiae officia!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

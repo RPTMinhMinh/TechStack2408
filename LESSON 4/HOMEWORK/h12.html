@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            height: 100vh;
+            gap: 10px;
+        }
+        
+        .leftbar {
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #F8CECC;
+            border: 2px solid #BA5955;
+        }
+        
+        .body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            flex: 1;
+            gap: 10px;
+        }
+        
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            background-color: #D5E8D4;
+            border: 2px solid #92BC7A;
+        }
+        .header, .footer{
+            border: 2px solid #E4CE8F;
+            background: #FFF2CC;
+            text-align: center;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="leftbar">Left Bar</div>
+        <div class="body">
+            <div class="header">Header</div>
+            <div class="content">Content</div>
+            <div class="footer">Footer</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: space-between;
+        }
+
+        .header {
+            background: #333333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .footer {
+            background: #333333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .content {
+            display: flex;
+            flex: 1;
+        }
+
+        .sidebar {
+            background: #F0F0F0;
+            padding: 0 80px;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 0 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="content">
+            <div class="sidebar">
+                <h2>Sidebar</h2>
+                <p>Menu items ...</p>
+            </div>
+            <div class="main-content">
+                <h2>Main Content</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ...</p>
+            </div>
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+
+</html>

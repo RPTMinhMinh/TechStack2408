@@ -1,0 +1,73 @@
+- <html>: chứa thư viện html
+- <head>:
+- <title>:
+- <body>:
+- <h1>, <h2>, ..., <h6>:
+- <p>:
+- <a>: <a href="dien link trang web">
+
+	href: link trang web cần chuyển hướng
+	
+- <img>: <img src="link ảnh" alt="Anh Dep" width="200" height="200">
+
+	src: Link ảnh
+	alt: mô tả ảnh khi không có mạng/ảnh lỗi
+	width: chiều rộng ảnh
+	height: chiều dài ảnh
+
+- <ul>, <ol>, <li>: 
+
+	<ul>
+		<li></li>
+	</ul>
+	
+	<ol type="">
+		<li></li>
+	<ol>
+	
+- <div> và <span>: nhóm nd lại
+- <form>:
+- <input>, <textarea>:
+
+	<input type="text" placeholder="Nhap du lieu" readonly>
+	<textarea cols="50" rows="5" placeholder="Nhap du lieu"></textarea>
+	<input type="text">: dùng cho dữ liệu 1 dòng
+	<textarea></textarea>: dùng cho dữ liệu dài
+
+- <table>, <tr>, <th>, <td>:tạo bảng
+
+	sử dụng cặp thẻ table để tạo bảng
+	tạo hàng: <tr></tr>
+	tiêu đề cột: <th></th>
+	trong mỗi hàng tạo ra các cột: <td></td>
+	các thuộc tính trong thẻ <th>:
+		rowspan: Gộp hàng
+		colspan: Gộp cột
+	
+- <iframe>: <iframe src="link web"></iframe>
+
+	src: link của trang web cần nhúng
+
+- <select>, <option>
+
+	<select>
+		<option>sở thích 1</option>
+		<option>sở thích 2</option>
+	</select>
+
+- <section>, <header>, <article> ,: nhóm nd lại (dễ nhận biết công dụng của các thẻ bên trong chúa nó)
+- label: nhãn dãn
+- <br>, <hr>: <br> xuống dòng, <hr> chia nd = gạch ngang
+
+- thẻ inline:
+	chiếm tối ưu không gian
+	không ngăn cách với các phần tử khác
+	chia sẻ chiều ngang với các phần tử khác
+	không chấp nhận width và height (k thể thay đổi kích thước của nó)
+	VD: <span>, <a>, <strong>, <img>, <label>,...
+- thẻ block:
+	chiếm toàn bộ chiều ngang
+	ngăn với các phần tử khác
+	k chia sẻ chiều ngang
+	VD: <p>, <h1>, <ul>, <li>, <table>,...
+

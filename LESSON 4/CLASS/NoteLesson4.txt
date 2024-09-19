@@ -1,0 +1,96 @@
+1. layout là gì?
+
+sắp xếp các khối nội dung trên trang web sa@ ch@ phù hợp
+trang web cần có bố cục dễ nhìn, dễ hiểu
+thuộc tính display
+- display: flex;
+- display: grid;
+
+				header
+left sidebar	content 	rightsidebar
+				footer
+
+2. inline và block
+- các giá trị:
+	inline: kích thước của thẻ = nội dung thẻ đó đang chứa
+			không có padding và margin mặc định
+			cùng nằm trên một dòng
+			không xét đc width và height
+			
+	block: 	kích thước chiều ngang là 100% chiều rộng màn hình
+			có thể chỉnh đc width và height
+			có margin mặc định ( 1 vài thẻ không có )
+			
+-	inline-block: 
+
+display: inline;	set ch@ một thẻ giống thẻ inline
+display: block; 	set ch@ một thẻ giống thẻ block
+display: inline-block:	cùng nằm trên một dòng
+						có thể chỉnh đc width và height
+-> về bản chất là giống thẻ inline nhưng chỉnh đc width height
+display: none;		ẩn phần tử đó đi
+					biến mất hoàn toàn
+					không chiếm k gian
+opacity: 0;			ẩn phần tử đi
+					không biến mất hoàn toàn
+					chiếm không gian
+3. flex
+là một modun của css đc thiết kế để sắp xếp phần tử the@ dạng container flexbox
+sử dụng đc thêm thuộc tính đi kèm của flexbox
+
+trong flexbox
+main axist: là trục chính của container (chiều dọc và có thể thay đổi đc)
+main-start/end: điểm đầu và điểm cuối của trục
+main size: trục phụ của container
+
+để sd flex trong css: display:flex;
+trong đó có các thuộc tính:
+	
+	flex-direction: trục
+					row;			tất cá các flex-items (phần tử con) sẽ sắp xếp the@ chiều ngang, hướng sang bên trái
+					row-reverse		ngược lại với row
+					column			tất cả các flex-items sẽ sắp xếp the@ chièu dọc, hướng từ trái qua phải
+					column-reverse	ngược lại với column
+Lưu ý: reverse sẽ đả@ ngược lại hướng
+	flex-wrap: có tự đọng@ xuóng dòng
+				nowrap: 		mặc định k xuóng dòng
+							chiều rộng items thu nhỏ lại để đảm bả@ chiều rộng items = chiều rộng container (nếu tổng chiều rộng itmes > chiều rộng container)
+				wrap:			tự động xuóng dòng nếu tổng chiều rộng items > chiều rộng container
+								1 2 3 4 -> 	1 2 3
+										4
+				wrap-reverse:	lên một dòng mới nếu tổng chiều rộng items > chiều rộng container
+								1 2 3 4 ->	4
+										1 2 3
+Lưu ý: wrap và wrap-reverse nếu chiều rộng container không đủ thì items thừa sẽ bị đẩy ra khỏi container
+	flex-flow: row wrap: sử dụng thay direction và wrap
+	
+	justify-content: căn chỉnh tất cả items trục chinh
+						flex-start: 	căn chỉnh về bên trái( điểm đầu của trục chính )
+										a @ b @ c @ @ @ @ @ @
+						flex-end: 	căn chỉnh về bên phải( điểm cuối của trục chính )
+										@ @ @ @ @ a @ b @ c
+						center:	căn ra giữa theo trục chính 
+										@ @ @ a @ b @ c @ @ @
+						space-items:	căn chỉnh khoảng cách items bằng nhau
+						space-around:	kết hợp space-items và căn chỉnh điểm đầu và điểm cuối (điểm đầu = điểm cuối)
+										@ a @ @ b @ @ c @
+						space-evenly: 	giống space-around nhưng bằng nhau
+										@ @ a @ @ b @ @ c @ @
+						space-between:	điểm đầu và cuối ở điểm bắt đầu và kết thúc trong khi các phần tử còn lại chia đều ra giữa
+										a @ @ @ b @ @ @ c
+						
+	
+	align-items: 	căn chỉnh điểm bắt đầu
+					start		điểm bắt đầu các items là ở sát trên
+					end			điểm bắt đầu các items là ở sát dưới
+					center		điểm bắt đầu các items là ở giữa
+					baseline	tất cả các chữ bên trong items đều trên một dòng (không quan tâm chiều dài của items)
+	
+	align-content: 	căn chỉnh tát cả items trục phu
+
+	order:	thay đỏi vị trí
+			giá trị mặc định bằng 0
+			xét the@ chiều trái sang phải
+			các giá trị: -2 -1 1 2 3 4 ...
+
+	align-self: sử dụng như align-items nhưng chỉ chỉnh từng items

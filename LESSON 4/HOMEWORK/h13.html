@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            gap: 10px;
+        }
+
+        .header {
+            border: 2px solid #E4CE8F;
+            background: #FFF2CC;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content {
+            display: flex;
+            flex: 1;
+            gap: 10px;
+        }
+
+        .leftbar {
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #F8CECC;
+            border: 2px solid #BA5955;
+        }
+
+        .body {
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1;
+            align-content: space-between;
+            justify-content: space-between;
+        }
+
+        .feature {
+            background-color: #D5E8D4;
+            border: 2px solid #92BC7A;
+            height: 30%;
+            width: 48%;
+        }
+
+        .other {
+            flex: 1;
+            background-color: #D5E8D4;
+            border: 2px solid #92BC7A;
+            height: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="content">
+            <div class="leftbar">Left Bar</div>
+            <div class="body">
+                <div class="feature">Feature 1</div>
+                <div class="feature">Feature 2</div>
+                <div class="feature">Feature 3</div>
+                <div class="feature">Feature 4</div>
+                <div class="other">Feature 5</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

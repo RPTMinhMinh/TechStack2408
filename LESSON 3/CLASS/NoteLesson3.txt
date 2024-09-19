@@ -1,0 +1,69 @@
+CSS box model
+
+1. thành phần của box model
+CSS luôn coi phần tử là hcn
+
+		margin: khoảng cách các phần tử liền kề,tính từ đường viền (k tính vào kích thước)
+		border: viền của phần tử
+		padding mặc định là 0
+		content: kc từ viền đến nd
+				
+MARGIN
+margin-top: kc của ptu hiện tại so với phần tử bên trên(lề trên)
+margin-right: kc của ptu hiện tại so với phần tử bên phải(lề phải)
+margin-bottom: kc của ptu hiện tại so với phần tử phía dưới(lề dưới)
+margin-left: kc của ptu hiện tại so với phần tử bên trái(lề trái)
+
+margin có thẻ nhận giá trị âm
+margin: auto 	(căn phần tử ra giữa màn hình)
+				(chỉ căn giữa nếu phần tử chưa chiếm hết khoảng trống toàn màn hình)
+margin không có cơ chiế cộng dồn
+VD: div1 có margin-bottom là 30px
+	div2 có margin-top là 30px
+	-> margin sẽ vẫn là 30px
+	
+PADDING: khoảng cách giữa đường viền và content
+padding cũng có các thuộc tính top right bottom left
+padding không nhận giá trị âm
+padding không có giá trị auto
+
+2. kích thước thật của box model
+width: 200
+height:200
+padding: 10
+border: 1px solid black
+margin:10
+
+width: 200 + 1*2 + 10*2 = 222px (width + border left + border right + padding left + padding right)
+
+box sizing có 2 gtri:
+content-box
+border-box
+
+3. Position là gì
+
+Phần tử html đều có chiều rộng và cao phụ thuộc vào content bên trong nó
+Thẻ nào viết trước hiển thị trước, viêt sau hiển thị sau (quy luật hiển thị)
+Position có thể thay đổi quy luật hiển thị của các phần tử trong html
+
+các giá trị
+position: static
+là giá trị mặc định của position
+
+position: relative
+cho phép dịch chuyển vị trí của phần tử một cách tương đối tính từ vị trí ban đầu
+có 4 thuộc tính:
+	top: 50px
+	left: 200px
+	right
+	bottom
+
+position: absolute;
+vụ trí phụ thuộc vào thẻ bao ngoài gần nó nhất mang giá trị relative
+-> relative là cha và absolute là con
+
+position: fixed
+cố định một phần tử trên màn hình
+
+position: sticky
+ phần tử ở vị trí ban đầu, sau khi cuộn thì sticky mới đc kích hoạt

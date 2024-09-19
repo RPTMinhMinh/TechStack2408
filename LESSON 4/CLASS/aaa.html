@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục trang</title>
+    <style>
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header, .footer {
+            background-color: #f0e68c;
+            padding: 10px;
+            text-align: center;
+        }
+        .intro {
+            background-color: #d8e5d6;
+            padding: 10px;
+            text-align: center;
+        }
+        .features {
+            display: flex;
+            justify-content: space-between;
+        }
+        .feature {
+            background-color: #F8CECC;
+            border: 2px solid #BA5955;
+            width: 14%;
+            padding: 30px;
+        }
+        .main {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        .image, .login-form {
+            background-color: #fef6a1;
+            padding: 20px;
+            flex: 1;
+            margin: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">Header</div>
+    <div class="intro">Intro</div>
+    <div class="features">
+        <div class="feature">Feature 1</div>
+        <div class="feature">Feature 2</div>
+        <div class="feature">Feature 3</div>
+        <div class="feature">Feature 4</div>
+        <div class="feature">Feature 5</div>
+    </div>
+    <div class="main">
+        <div class="image">Image 1</div>
+        <div class="login-form">Login form</div>
+    </div>
+    <div class="footer">Footer</div>
+</div>
+
+</body>
+</html>

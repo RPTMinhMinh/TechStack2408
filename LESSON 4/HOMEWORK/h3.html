@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .header {
+            padding: 8px;
+            display: flex;
+            background: #333333;
+            color: white;
+            justify-content: flex-start;
+        }
+        
+        .items {
+            width: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .items.home {
+            background-color: #555555;
+            border-radius: 3px;
+            padding: 7px;
+        }
+
+        .items:hover{
+            background-color: #555555;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="items home">Home</div>
+        <div class="items">About</div>
+        <div class="items">Services</div>
+        <div class="items">Contact</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #F0F0F0;
+        }
+
+        .container {
+            border-radius: 5px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            background: #FFFFFF;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        label {
+            width: 100px;
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        input {
+            padding: 5px;
+            flex: 1;
+        }
+
+        button {
+            padding: 10px 100px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 3px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <label for="">Name: </label>
+            <input type="text">
+        </div>
+        <div class="content">
+            <label for="">Email: </label>
+            <input type="email">
+        </div>
+        <div class="content">
+            <label for="">Message: </label>
+            <input type="text">
+        </div>
+        <button>Submit</button>
+    </div>
+</body>
+
+</html>

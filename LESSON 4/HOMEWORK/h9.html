@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .box {
+            display: flex;
+            justify-content: space-between;
+            background: #FFF2CC;
+            border: 2px solid #F7E7B7;
+            padding: 10px;
+        }
+
+        .left1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            padding: 10px 30px;
+            background-color: #CDEB8B;
+        }
+
+        .right1 {
+            display: flex;
+            align-items: center;
+            border: 1px solid black;
+        }
+
+        .items1 {
+            border: 1px solid black;
+            padding: 10px 20px;
+            background-color: #FFCCCC;
+        }
+
+        .left2 {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            border: 1px solid black;
+            padding: 10px 20px;
+            background-color: #CDEB8B;
+            margin-right: 15px;
+        }
+
+        .right2,
+        .right3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .items2 {
+            padding: 10px 20px;
+        }
+
+        .login {
+            border: 1px solid #A4C481;
+            padding: 10px 20px;
+            background-color: #D5E8D4;
+        }
+
+        h3 {
+            margin: 0;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            background: #d5e8d4;
+            border-radius: 50%;
+            border: 1px solid #a6c594;
+            margin-right: 10px;
+            margin-left: 20px;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+        }
+
+        .sub-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0px 16px;
+        }
+
+        .right4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 320px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="left1">Logo</div>
+            <div class="right1">
+                <div class="items1">About</div>
+                <div class="items1">Home</div>
+                <div class="items1">Contact</div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="left2">
+                <div class="logo">Logo</div>
+                <h3>Brand name</h3>
+            </div>
+            <div class="right2">
+                <div class="items2">Home</div>
+                <div class="items2">About</div>
+                <div class="items2">Contact</div>
+                <div class="login">Login</div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="left2">
+                <div class="logo">Logo</div>
+                <h3>Brand name</h3>
+            </div>
+            <div class="right3">
+                <div class="items3">Home</div>
+                <div class="avatar"></div>
+                <div class="items3">Your name</div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="avatar"></div>
+            <div class="content">
+                <div class="sub-menu"><i class="fa-solid fa-house"></i>Home</div>
+                <div class="sub-menu"><i class="fa-solid fa-user"></i>Friends</div>
+                <div class="sub-menu"><i class="fa-solid fa-shop"></i>Market</div>
+            </div>
+            <div class="right4">
+                <i class="fa-solid fa-bell"></i>
+                <div class="avatar"></div>
+                <div class="items4">Your Name</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

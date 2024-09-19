@@ -1,0 +1,125 @@
+
+CSS là gì?
+- tạo ra phong cách cho trang web
+- phiên bản hiện tại: CSS3
+
+3 cách viết code trong CSS:
+	- external: viết CSS vào file .css và link vào file HTML
+	- Internal: viết CSS vào thẻ <style> trong file .html (nên viết trong thẻ <head>)
+	- Inline CSS: viết CSS như là giá trị thuộc tính style của thẻ
+-> Nên viết riêng HTML, CSS để dễ đọc, dễ bảo trì
+
+Đường dẫn tương đối và Đường dẫn tuyệt đối:
+đường dẫn tuyệt đối:
+- đầy đủ các thành phần
+- thường lấy trên web
+đường dẫn tương đối:
+- ảnh tải về máy
+- cùng nằm trong cùng 1 folder (đồng cấp)
+- <img src="./tên file.đuôi file">
+- VD:	<img src="./image.jpg"> 		(html đồng cấp với image.jpg)
+		<img src="./imgs/image.jpg"> 	(html đồng cấp với folder imgs(chứa image.jpg))
+		<img src="../image.jpg"> 		(image.jpg đồng cấp với folder chứa html) 
+
+Syntax CSS
+
+	mỗi quy tắc CSS áp dụng thông qua chọn lọc(selector)
+	Property: thuộc tính mà muốn áp dụng cho selector đó (VD: color,...)
+	value: giá trị của property đó (VD: red,...)
+	
+	Selector theo id:
+		<h1 id="heading">
+		#heading{
+			color: red;
+		}
+
+	selector theo class:
+		<h1 class="heading">
+		.heading{
+			color: red;
+		}
+
+	selector theo tag:
+		<h1>
+		h1{
+			color: red;
+		}
+
+Lưu ý: h1.heading, h1#heading
+
+Thứ tự ưu tiện trong css:
+1.Inline 
+2.selector theo id 30đ
+3.selector theo class 20đ
+4.selector theo tag name 10đ
+
+<h1 style="red">
+#heading{}
+.heading{}
+h1{}
+
+theo cách viết:
+1. inline
+2. internal
+3. external
+
+Lưu ý: 	!important quan trọng hơn cả inline
+		khi viết gộp (h1.heading), cộng điểm nào cao hơn thì sẽ ưu tiên hơn (chỉ có td với những phần có điểm)
+		trong CSS, cái viết sau sẽ đè cái trước (nếu chúng có chung cấp, VD: chung thẻ h1)
+
+Lưu ý: *{} áp dụng cho cả trang web
+các thuộc tính hay đc sử dụng:
+Công dụng của các thuộc tính
+Các giá trị đi kèm
+- font-family: 
+	Xác định kiểu chữ cho văn bản
+	Tên font (ví dụ: Arial, Times New Roman), hoặc danh sách các font (ví dụ: font-family: Arial, sans-serif;)
+	cách import font vào html:
+		vào fonts.google.com và chọn font
+		Nhấn get font
+		Get embed code
+		copy code và paste vào html
+- font-size:
+	Xác định kích thước chữ
+	Các đơn vị như px, em, % (ví dụ: font-size: 16px;)
+- font-weight:
+	Xác định độ dày của chữ
+	normal, bold, bolder, lighter, hoặc số từ 100 đến 900 (ví dụ: font-weight: bold;)
+- color: 
+	Xác định màu sắc của văn bản
+	Mã màu HEX, RGB, tên màu (ví dụ: color: #ff0000;)
+	rgba(0 ,0, 250, 0.1) -> a: độ trong suốt của màu
+- text-align:
+	Xác định cách căn chỉnh văn bản trong phần tử (thẻ)
+	left, right, center, justify (ví dụ: text-align: center;)
+	chỉ áp dụng cho thẻ block (<p>,...)
+	chỉ áp dụng đc khi phần tử chưa chiếm hết màn hình
+- background:
+	Thiết lập các thuộc tính nền cho phần tử
+	Có thể bao gồm màu nền, hình ảnh, vị trí, và kích thước (ví dụ: background: #fff url('image.jpg') no-repeat;)
+- background-color:
+	Xác định màu nền cho phần tử
+	Mã màu HEX, RGB, tên màu (ví dụ: background-color: blue;)
+- background-image:
+	Xác định hình ảnh nền cho phần tử
+	Độ dày, kiểu viền, và màu sắc (ví dụ: border: 1px solid black;)
+- border:
+	Xác định đường viền cho phần tử
+	Độ dày, kiểu viền, và màu sắc (ví dụ: border: 1px solid black;)
+	là viết gọn của border-color,width,style
+	có thể chỉnh trên dưới trái phải bằng top bottom left right
+- border-radius:
+	Xác định độ cong của các góc viền
+	Các đơn vị như px, % (ví dụ: border-radius: 10px;)
+	có thể chỉnh trên dưới trái phải bằng top bottom left right
+- width và height:
+	Xác định chiều rộng và chiều cao của phần tử
+	chỉ áp dụng cho thẻ block (<p>,...)
+	Các đơn vị như px, % (ví dụ: border-radius: 10px;)
+- margin và padding:
+	margin: Khoảng cách bên ngoài của phần tử
+	padding: Khoảng cách bên trong của phần tử
+	Các đơn vị như px, % (ví dụ: margin: 10px; padding: 5px;)
+- opacity:
+	Xác định độ trong suốt của phần tử
+	Giá trị từ 0 (hoàn toàn trong suốt) đến 1 (hoàn toàn không trong suốt) (ví dụ: opacity: 0.5;)

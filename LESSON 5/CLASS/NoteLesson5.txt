@@ -1,0 +1,19 @@
+réponsive
+
+giao diện khác nhau với từng thiết bị
+mô tả khả nang của một trang web hoặc ứng dụng web
+sử dụng kĩ thuật media queries để thay đổi bố cục tùy thuộc vào màn hình thiết bị
+
+media queries:
+	all: tất cả các thiết bi media
+	screen: các thiết bị media hiển thị trên màn hình: điện thoại, máy tính,...
+	print: hiển thị văn bản in
+	speech: các thiết bị có chức năng đọc 
+ @media not/only mediaqueries and (mediaFeature){}
+
+vd:	@media screen:
+	@media not print:
+
+feature là điều kiện mà thiết bị hiển thị
+ max/min-height: chiều cao tối đa/thiểu của viewpoint
+ max/min-width: chiều rộng tối đa/thiểu của viewpoint
