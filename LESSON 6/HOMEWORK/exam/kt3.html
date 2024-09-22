@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            border: 1px solid #CCCCCC;
+            display: flex;
+            padding: 10px;
+            justify-content: space-between;
+            background-color: #F5F5F5;
+        }
+
+        .header-left {
+            display: flex;
+            width: 140px;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 80px;
+        }
+
+        .avatar {
+            border: 1px solid #CAB325;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #E3C800;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-right: 80px;
+        }
+
+        /*CONTENT*/
+        .content {
+            margin: 20px 30px;
+            display: flex;
+        }
+
+        .content-left {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image {
+            border: 1px solid #C9A6BD;
+            width: 520px;
+            height: 240px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #E3C3D5;
+        }
+
+        .option {
+            display: flex;
+            width: 520px;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .button {
+            width: 120px;
+            padding: 8px 0;
+            text-align: center;
+            border-radius: 3px;
+        }
+
+        .button.share {
+            border: 1px solid #D08E8B;
+            background-color: #F8CECC;
+        }
+
+        .button.dowload {
+            background-color: #E3C800;
+            border: 1px solid #D0B500;
+        }
+
+        .button.big {
+            width: 240px;
+            background-color: #1BA1E2;
+            border: 1px solid #108ECF;
+            color: white;
+        }
+
+        .content-right {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+
+        .more {
+            margin: 10px 0;
+        }
+
+        .content-right-types {
+            display: flex;
+            gap: 20px;
+        }
+
+        .type {
+            border: 1px solid;
+            padding: 4px 7px;
+            border-radius: 5px;
+        }
+
+        .infor {
+            display: flex;
+            gap: 30px;
+            margin: 16px 0;
+        }
+
+        .infor-title {
+            width: 80px;
+        }
+
+        .green-color {
+            color: #9AC56F;
+        }
+
+        .infor-description {
+            color: blue;
+        }
+
+        /*DESCRIPTION*/
+
+        .description {
+            margin: 20px 70px;
+        }
+
+        .description-title {
+            margin: 20px 0;
+        }
+
+        .description-box {
+            border: 1px solid black;
+            padding: 12px;
+        }
+
+        /*ACTOR*/
+        .actor {
+            margin: 20px 70px;
+        }
+
+        .actor-title {
+            margin: 20px 0;
+        }
+
+        .actor-box {
+            display: flex;
+            gap: 30px;
+        }
+
+        .actor-avatar {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        @media (max-width:1200px){
+            .content {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .content-right{
+                align-items: flex-start;
+                flex-direction: row;
+            }
+        }
+        @media (max-width: 992px){
+            .content {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .content-right{
+                width: 100%;
+                align-items: flex-start;
+                flex-direction: row;
+                justify-content: space-evenly;
+
+            }
+        }
+        
+        
+        @media (max-width:576px) {
+            .header-right {
+                display: none;
+            }
+
+            .content {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .content-left {
+                width: 100%;
+                justify-content: center;
+            }
+            .image{
+                width: 300px;
+            }
+           
+            .option {
+                width: 100%;
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+            }
+            .content-right{
+                display: flex;
+                flex-direction: column;
+            }
+            .actor-box {
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
+        }
+
+        
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-left">
+                <div class="avatar"></div>
+                <h3>Hello Film</h3>
+            </div>
+            <div class="header-right">
+                <div class="feature">Home</div>
+                <div class="feature">Top film</div>
+                <div class="feature">Categories</div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-left">
+                <div class="image">
+                    <strong>IMAGE</strong>
+                </div>
+                <div class="option">
+                    <div class="button share">Chia sẻ</div>
+                    <div class="button dowload">Tải xuống</div>
+                    <div class="button big">Xem phim</div>
+                </div>
+            </div>
+            <div class="content-right">
+                <div class="content-right-description">
+                    <h2 class="more">Unknown Battle</h2>
+                    <p class="more">Trận Chiến Rzhev (2019)</p>
+                    <p class="green-color more">2 giờ 17 phút</p>
+                    <div class="more">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="content-right-types">
+                        <div class="type">Chiến tranh</div>
+                        <div class="type">Chính kịch</div>
+                    </div>
+                </div>
+                <div class="content-right-infor">
+                    <div class="infor">
+                        <div class="infor-title"><strong>Đạo diễn</strong></div>
+                        <div class="infor-description">Igor Kopylov</div>
+                    </div>
+                    <div class="infor">
+                        <div class="infor-title"><strong>Quốc gia</strong></div>
+                        <div class="infor-description">Nga</div>
+                    </div>
+                    <div class="infor">
+                        <div class="infor-title"><strong>Khởi chiếu</strong></div>
+                        <div class="infor-description">12/05/2019</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="description">
+            <div class="description-title"><strong>Mô tả</strong></div>
+            <div class="description-box">
+                <p class="paragraph">Bộ phim hành động chiến tranh với nhiều cảnh chiến đấu mãn nhãn, lột tả hết sự khốc
+                    liệt và tàn nhẫn của chiến tranh với những con người, những số phận nhỏ bé bị xoáy vào cuộc chiến.
+                    Đó là anh chàng Kostya gan dạ nhưng cũng hết sức lẻm lĩnh, là anh Đại đội trưởng lâu đau đầu về mạng
+                    sống của những người đồng chí dưới quyền chỉ huy của mình, là anh sĩ quan NKVD bướng bỉnh và có phần
+                    bảo thủ để rồi bản thân phải hứng chịu số phận nghiệt ngã ... Nhưng vượt lên tất cả, đó là tinh thần
+                    chiến đấu ngoan cường và dũng mãnh của những người lính Hồng quân trong cuộc chiến tranh Vệ quốc bảo
+                    vệ đất mẹ Xô viết. Trận chiến Rzhev- câu chuyện của đại đội Hồng quân Xô viết tại ngôi làng
+                    Ovsyannikovo nhỏ bé đã chôn vùi hết gần như toàn bộ quân số của mình nhưng vẫn chiến đấu tới hơi thở
+                    cuối cùng để chống lại gót giày phát xít của Đức quốc xã.</p>
+            </div>
+        </div>
+        <div class="actor">
+            <div class="actor-title"><strong>Diễn viên</strong></div>
+            <div class="actor-box">
+                <div class="actor-feature">
+                    <div class="actor-avatar"><img src="./avatar.jpg" alt=""></div>
+                    <div class="actor-name green-color">Sergey Zharkov</div>
+                </div>
+                <div class="actor-feature">
+                    <div class="actor-avatar"><img src="./avatar.jpg" alt=""></div>
+                    <div class="actor-name green-color">Ivan Batarev</div>
+                </div>
+                <div class="actor-feature">
+                    <div class="actor-avatar"><img src="./avatar.jpg" alt=""></div>
+                    <div class="actor-name green-color">Oleg Gayanov</div>
+                </div>
+                <div class="actor-feature">
+                    <div class="actor-avatar"><img src="./avatar.jpg" alt=""></div>
+                    <div class="actor-name green-color">Arseny Semenov</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

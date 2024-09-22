@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            display: flex;
+            border: 1px solid #F3E3B3;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+            background: #FFF2CC;
+        }
+
+        .header-left {
+            display: flex;
+            width: 300px;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .circle {
+            width: 49px;
+            border: 1px solid #A383AA;
+            height: 49px;
+            border-radius: 50%;
+            background-color: #E1D5E7;
+        }
+
+        .header-right {
+            display: flex;
+            margin: 0 20px;
+            gap: 20px;
+        }
+
+        .header-feature {
+            padding: 10px;
+        }
+
+        .header-feature.other {
+            padding: 10px;
+            border: 1px solid #9DB0C8;
+            border-radius: 7px;
+            background-color: #DAE8FC;
+        }
+
+        /*Information*/
+
+        .information{
+            margin: 32px;
+        }
+        .information-title{
+            margin: 20px 0;
+        }
+        .box-information{
+            display: flex;
+        }
+        .box-information-left{
+            width: 50%;
+            height: 200px;
+            border: 1px solid black;
+            padding: 10px 20px 20px 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+        }
+        .box-information-left-option{
+            width: 94%;
+            padding: 5px;
+            border: 1px solid #E4E4E4;
+            border-radius: 3px;
+        }
+        .box-information-right{
+            width: 50%;
+            height: 200px;
+            border: 1px solid black;
+            padding: 10px 20px 20px 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .options{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 120px;
+        }
+
+        .option{
+            display: flex;
+            gap: 30px;
+            border: 1px solid;
+            padding: 15px ;
+            margin: 5px 0;
+        }
+        .box-information-right-option{
+            transform: scale(1.5)
+        }
+        .red{
+            color: red;
+        }
+
+        /*CART*/
+        .cart{
+            margin: 32px;
+        }
+        .cart-title{
+            margin: 20px 0;
+        }
+        .box-cart{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border: 1px solid;
+            margin: 20px 0;
+        }
+        .box-cart-left{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:20px;
+        }
+        .image{
+            border: 1px solid;
+            width: 117px;
+            height: 83px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .description-options{
+            display: flex;
+            justify-content: space-around;
+        }
+        .description-option{
+            border: 1px solid #79BCC1;
+            padding: 4px 12px;
+            border-radius: 3px;
+            background-color: #B0E3E6;
+        }
+        .description{
+            display: flex;
+            flex-direction: column;
+            height: 83px;
+            justify-content: space-evenly;
+        }
+        .box-cart-right{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        .choose{
+            display: flex;
+            gap: 10px;
+        }
+        .choose-number{
+            width: 36px;
+            padding: 10px 7px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .choose-button{
+            padding: 0 10px;
+            border: 1px solid #CA7E7B;
+            background-color: #F8CECC;
+            border-radius: 3px;
+        }
+
+        /*Footer*/
+        .footer {
+
+            border: 1px solid #F3E3B3;
+            padding: 0.5rem;
+            background: #FFF2CC;
+            margin-top: 30px;
+            padding: 20px;
+        }
+
+        .contact {
+            display: flex;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .contact-feature {
+            display: flex;
+            gap: 10px;
+        }
+        @media (max-width: 768px){
+            .header-feature {
+                display: none;
+            }
+            .header-feature.other {
+                display: block;
+            }
+        }
+        @media (max-width:576px){
+            .header-feature {
+                display: none;
+            }
+
+            .header-feature.other {
+                display: block;
+            }
+            .information-title,.cart-title{
+                text-align: center;
+            }
+            .box-information{
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+            .box-information-left,.box-information-right{
+                width: 100%;
+            }
+            .box-cart{
+                flex-direction: column;
+                gap: 30px;
+            }
+            .choose{
+                margin: auto;
+            }
+            .paragraph{
+                display: flex;
+                flex-direction: row-reverse;
+            }
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-left">
+                <div class="circle"></div>
+                <h2 class="title">My Shop</h2>
+            </div>
+            <div class="header-right">
+                <div class="header-feature">Home</div>
+                <div class="header-feature">About us</div>
+                <div class="header-feature">Contact</div>
+                <div class="header-feature other">My cart (0)</div>
+            </div>
+        </div>
+        <div class="information">
+            <div class="information-title"><Strong>Your Information</Strong></div>
+            <div class="box-information">
+                <div class="box-information-left">
+                    <p>Full name <span class="red">*</span></p>
+                    <div class="input"><input type="text" class="box-information-left-option"></div>
+                    <p>Phone number <span class="red">*</span></p>
+                    <div class="input"><input type="text" class="box-information-left-option"></div>
+                    <p>Address <span class="red">*</span></p>
+                    <div class="input"><input type="text" class="box-information-left-option"></div>
+                </div>
+                <div class="box-information-right">
+                    <p>Payment method <span class="red">*</span></p>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" class="box-information-right-option">
+                            <p>Credit cart</p>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="box-information-right-option">
+                            <p>Your bank</p>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="box-information-right-option">
+                            <p>Momo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart">
+            <div class="cart-title"><strong>Cart</strong></div>
+            <div class="box-cart">
+                <div class="box-cart-left">
+                    <div>
+                        <input type="checkbox">
+                    </div>
+                    <div class="image">IMAGE</div>
+                    <div class="description">
+                        <h3>Lorem ipsum dolor</h3>
+                        <div class="description-options">
+                            <div class="description-option">Blue</div>
+                            <div class="description-option">Classic</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-cart-right">
+                    <div class="choose">
+                        <div><input type="number" class="choose-number"></div>
+                        <button class="choose-button">Remove</button>
+                    </div>
+                    <div class="paragraph"><strong>Total: $210 </strong></div>
+                </div>
+            </div>
+            <div class="box-cart">
+                <div class="box-cart-left">
+                    <div>
+                        <input type="checkbox">
+                    </div>
+                    <div class="image">IMAGE</div>
+                    <div class="description">
+                        <h3>Lorem ipsum dolor</h3>
+                        <div class="description-options">
+                            <div class="description-option">Blue</div>
+                            <div class="description-option">Classic</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-cart-right">
+                    <div class="choose">
+                        <div><input type="number" class="choose-number"></div>
+                        <button class="choose-button">Remove</button>
+                    </div>
+                    <div class="paragraph"><strong>Total: $210 </strong></div>
+                </div>
+            </div>
+            <div class="box-cart">
+                <div class="box-cart-left">
+                    <div>
+                        <input type="checkbox">
+                    </div>
+                    <div class="image">IMAGE</div>
+                    <div class="description">
+                        <h3>Lorem ipsum dolor</h3>
+                        <div class="description-options">
+                            <div class="description-option">Blue</div>
+                            <div class="description-option">Classic</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-cart-right">
+                    <div class="choose">
+                        <div><input type="number" class="choose-number"></div>
+                        <button class="choose-button">Remove</button>
+                    </div>
+                    <div class="paragraph"><strong>Total: $210 </strong></div class="paragraph">
+                </div>
+            </div>
+            <div class="box-cart">
+                <div class="box-cart-left">
+                    <div>
+                        <input type="checkbox">
+                    </div>
+                    <div class="image">IMAGE</div>
+                    <div class="description">
+                        <h3>Lorem ipsum dolor</h3>
+                        <div class="description-options">
+                            <div class="description-option">Blue</div>
+                            <div class="description-option">Classic</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-cart-right">
+                    <div class="choose">
+                        <div><input type="number" class="choose-number"></div>
+                        <button class="choose-button">Remove</button>
+                    </div>
+                    <div class="paragraph"><strong>Total: $210 </strong></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <h3>My shop</h3>
+            <div class="contact">
+                <div class="contact-feature">
+                    <div class="contact-feature-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="contact-feature-infor">22C Somewhere, Ha Noi</div>
+                </div>
+                <div class="contact-feature">
+                    <div class="contact-feature-icon"><i class="fa-solid fa-tty"></i></div>
+                    <div class="contact-feature-infor">09876543210</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

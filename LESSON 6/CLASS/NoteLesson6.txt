@@ -1,1 +1,45 @@
-aaa
+deploy: là quá trình  đưa mã nguồn từ mtr pt lên môi trường khác để chạy trang web
+repo: chứa toàn bộ dự án, cả tệp, thư mục, và lịch sử thay đổi
+clone: sao chép một repo từ git về máy tính để làm và thay đổi
+		git clone <repo_url>
+fork: tạo bản sao một repo cho người khác
+
+
+b1: tạo repo
+b2: vào folder cần tải code và mở terminal
+b3:
+-	sử dụng cậu lệnh git: 
+		git init 
+	để khởi tạo repo trên local
+-	kiểm tra trong folder có file .git chưa
+-	dùng cho lần đầu tiên
+		git config --global user.email "yourname@gmail.com"
+		git config --global user.name  "yourname"
+-	kiểm tra trên máy tính đã config git hay chưa
+		git config --global user.email
+		git config --global user.name
+b4:
+-	chạy lệnh git remote add origin link_repo
+		git remote add origin https://github.com/RPTMinhMinh/TechStack2408.git
+-	Kiểm tra
+		git remote -v
+b5: *
+-	chạy lệnh:
+		git add .
+	thêm toàn bộ các file (thêm mới or chỉnh sửa) vào commit
+		git add your_file_name
+	thêm 1 file (thêm mới or chỉnh sửa) vào commit
+b6: *
+-	chạy lệnh:
+		git commit -m "description"
+	comment để hiểu các file làm gì
+b7: *
+-	chạy lệnh:
+		git push origin master
+	đẩy toàn bộ commit đã tạo trên repo local lên repo trên master
+
+deploy từ nhánh master:
+	https://rptminhminh.github.io/TechStack2408/LESSON%201/HOMEWORK/hw1.html
+	
+git clone <project_url>
+git pull origin master

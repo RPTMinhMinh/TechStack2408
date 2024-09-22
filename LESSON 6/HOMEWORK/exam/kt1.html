@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+
+            display: flex;
+            border: 1px solid #F3E3B3;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+            background: #FFF2CC;
+        }
+
+        .header-left {
+            display: flex;
+            width: 300px;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .circle {
+            width: 49px;
+            border: 1px solid #A383AA;
+            height: 49px;
+            border-radius: 50%;
+            background-color: #E1D5E7;
+        }
+
+        .header-right {
+            display: flex;
+            margin: 0 20px;
+            gap: 20px;
+        }
+
+        .header-feature {
+            padding: 10px;
+        }
+
+        .header-feature.cart {
+            padding: 10px;
+            border: 1px solid #9DB0C8;
+            border-radius: 7px;
+            background-color: #DAE8FC;
+        }
+
+        /*Content*/
+
+        .content {
+            display: flex;
+        }
+
+        .content-left {
+            width: 50%;
+            display: flex;
+            padding: 32px;
+            flex-direction: column;
+        }
+
+        .image.big {
+            width: 530px;
+            border: 1px solid;
+            height: 240px;
+            margin: auto;
+        }
+
+        .image-icon {
+            display: none;
+        }
+
+        .image-features {
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+            width: 530px;
+            justify-content: space-between;
+        }
+
+        .image {
+            border: 1px solid #D1D1D1;
+            width: 120px;
+            height: 60px;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #F5F5F5;
+        }
+
+        .content-right {
+            width: 50%;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .box-feature {
+            display: flex;
+            gap: 10px;
+        }
+
+        .content-feature {
+            border: 1px solid;
+            border-radius: 3px;
+            padding: 5px 10px;
+        }
+
+        .infor {
+            display: flex;
+            width: 160px;
+            justify-content: space-between;
+        }
+
+        .button {
+            margin-top: 20px;
+        }
+
+        .inp {
+            width: 36px;
+            padding: 10px 7px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            padding: 10px 7px;
+            border: 1px solid #CA7E7B;
+            background-color: #F8CECC;
+            border-radius: 3px;
+        }
+
+        /*Comment*/
+        .comment {
+            display: flex;
+            flex-direction: column;
+            margin: 0 30px;
+            gap: 20px;
+        }
+
+        .boxcomment {
+            border: 1px solid;
+            padding: 5px 10px 10px 10px;
+        }
+
+        .boxcomment-title {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .boxcomment-title-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .boxcomment-title-left-avatar {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #A383AA;
+            border-radius: 50%;
+            background-color: #E1D5E7;
+        }
+
+        .time {
+            margin: 10px 0;
+        }
+
+        /*Footer*/
+
+        .footer {
+
+            border: 1px solid #F3E3B3;
+            padding: 0.5rem;
+            background: #FFF2CC;
+            margin-top: 30px;
+            padding: 20px;
+        }
+
+        .contact {
+            display: flex;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .contact-feature {
+            display: flex;
+            gap: 10px;
+        }
+
+        @media (max-width: 992px) {
+            .content {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .image.big {
+                width: 100%;
+            }
+
+            .image-features {
+                width: 100%;
+            }
+        }
+        @media (max-width: 768px) {
+            .header-feature {
+                display: none;
+            }
+
+            .header-feature.cart {
+                display: block;
+            }
+            .content-left{
+                width: 100%;
+            }
+            .image.big {
+                width: 400px;
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+        @media (max-width:576px) {
+
+            .content-left{
+                width: 100%;
+            }
+            .image-features {
+                display: none;
+            }
+
+            .image-icon {
+                display: block;
+            }
+
+            .image.big {
+                width: 274px;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .header-feature {
+                display: none;
+            }
+
+            .header-feature.cart {
+                display: block;
+            }
+        }
+
+        
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-left">
+                <div class="circle"></div>
+                <h2 class="title">My Shop</h2>
+            </div>
+            <div class="header-right">
+                <div class="header-feature">Home</div>
+                <div class="header-feature">About us</div>
+                <div class="header-feature">Contact</div>
+                <div class="header-feature cart">My cart (0)</div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-left">
+                <div class="image big">
+                    <i class="fa-solid fa-left-long image-icon"></i>
+                    <span>IMAGE</span>
+                    <i class="fa-solid fa-right-long image-icon"></i>
+                </div>
+                <div class="image-features">
+                    <div class="image">IMAGE</div>
+                    <div class="image">IMAGE</div>
+                    <div class="image">IMAGE</div>
+                    <div class="image">IMAGE</div>
+                    <div class="image">IMAGE</div>
+                    <div class="image">IMAGE</div>
+                    <div class="image">IMAGE</div>
+                    <div class="image">IMAGE</div>
+                </div>
+            </div>
+            <div class="content-right">
+                <h2 class="title">Lorem ipsum dolor</h2>
+                <p class="paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ca commodo consequat.
+                </p>
+                <div class="option"><strong>Color</strong></div>
+                <div class="box-feature">
+                    <div class="content-feature">Blue</div>
+                    <div class="content-feature">Red</div>
+                    <div class="content-feature">Green</div>
+                </div>
+                <div class="option"><strong>Design</strong></div>
+                <div class="box-feature">
+                    <div class="content-feature">Classic</div>
+                    <div class="content-feature">Mordern</div>
+                </div>
+                <div class="infor">
+                    <div class="option"><strong>Price:</strong></div>
+                    <div class="description">$129.01</div>
+                </div>
+                <div class="infor">
+                    <div class="option"><strong>Discount:</strong></div>
+                    <div class="description">10%</div>
+                </div>
+                <div class="infor">
+                    <div class="option"><strong>Rating:</strong></div>
+                    <div class="description"></div>
+                </div>
+                <div class="infor">
+                    <div class="option"><strong>In Stocks:</strong></div>
+                    <div class="description">1004</div>
+                </div>
+                <div class="button">
+                    <input type="number" class="inp"> <button>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="comment">
+            <p><Strong>Comments</Strong></p>
+            <div class="boxcomment">
+                <div class="boxcomment-title">
+                    <div class="boxcomment-title-left">
+                        <div class="boxcomment-title-left-avatar"></div>
+                        <div class="boxcomment-title-left-infor">
+                            <div class="name"><Strong>Customer 1</Strong></div>
+                            <div class="place">Ha Noi</div>
+                        </div>
+                    </div>
+                    <div class="boxcomment-title-right">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <p class="time">2022-10-10 19:40:01</p>
+                <p>sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+            </div>
+            <div class="boxcomment">
+                <div class="boxcomment-title">
+                    <div class="boxcomment-title-left">
+                        <div class="boxcomment-title-left-avatar"></div>
+                        <div class="boxcomment-title-left-infor">
+                            <div class="name"><Strong>Customer 1</Strong></div>
+                            <div class="place">Ha Noi</div>
+                        </div>
+                    </div>
+                    <div class="boxcomment-title-right">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <p class="time">2022-10-10 19:40:01</p>
+                <p>sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+            </div>
+        </div>
+        <div class="footer">
+            <h3>My shop</h3>
+            <div class="contact">
+                <div class="contact-feature">
+                    <div class="contact-feature-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="contact-feature-infor">22C Somewhere, Ha Noi</div>
+                </div>
+                <div class="contact-feature">
+                    <div class="contact-feature-icon"><i class="fa-solid fa-tty"></i></div>
+                    <div class="contact-feature-infor">09876543210</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
