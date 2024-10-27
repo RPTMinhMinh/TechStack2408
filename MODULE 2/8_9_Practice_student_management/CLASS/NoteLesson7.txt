@@ -1,0 +1,122 @@
+buổi 1:
+-   CRDS
+-   sắp xếp
+
+buổi 2:
+-   update
+-   web storage
+-   client-server
+
+đề tài : quản lý danh sách học sinh
+-   thông tin:
+    -   id: mã định danh của hs
+    -   name: tên hs
+    -   birthday: ngày sinh
+    -   gender: giới tính
+    -   math score: điểm toán của hs
+    -   english score: điểm anh
+    -   literature score: điểm ngữ văn
+
+-   kiểu dữ liệu: array, object
+    -   danh sách học sinh = [
+        {
+            id: 1;
+            name: Tran Van A;
+            birthday: '1/1/2003'
+            gender: 'boy'
+            mathScore: 9
+            englishScore: 5;
+            literatureScore: 6;
+        },
+        {
+            id: 2;
+            name: Le Thi B;
+            ...
+        },
+        ...
+    ]
+
+-   giao diện:
+
+-   web storage:
+    -   local storage:
+        -   định dạng json dùng cho truy vấn (kiểu định dạng cơ bản và array). muốn định dạng object thì phải chuyển về json (kiểu string) bằng JSON.stringly
+        -   khai báo: localStorage.setItem('PI',3.14)
+                localStorage.number = 10
+        -   truy vấn: dùng console.log(): getItem(PI)
+                truy vấn object: JSON.parse
+        -   xóa
+                clear
+                removeItem("PI")
+
+        -   Tổng hợp:
+            -   localStorage.setItem('key','value')
+            -   localStorage.getItem('key')
+            -   JSON.stringly('key')
+            -   JSON.parse('key')
+            -   localStorage.removeItem("key")
+    -   session storage:
+
+-   CRUD:
+    -   R -> read (hiển thị thông tin học sinh)
+    -   cách làm:
+        -   b1: tạo ra 1 hàm renderInfoStudent
+        -   b2: tạo chuỗi rỗng đại diện cho các câu lệnh html in lên màn hình
+        -   b3: duyệt mảng listStudent 
+            -> lấy ra thông tin từng học sinh
+            -> tạo ra đoạn html tương ứng để hiển thị thông tin học sinh
+        -   b4: Selector đến thẻ tbody và thay thể toàn bộ nd trong thẻ là đoạn html vừa tạo ra
+    -   template string ( `` ):
+        -   multiple line 
+        -   Viết nội suy ( truyền một biến từ ngoài vào chuỗi ): ${}
+
+    -   C -> create (tạo mới thông tin học sinh)
+    -   cách làm:
+        -   b1: tạo hàm createStudent 
+        -   b2: lấy thông tin người dùng vừa nhập
+        -   b3: tạo một đối tượng học sinh mới
+        -   b4: thêm đối tượng học sinh mới vừa tạo vòa danh sách
+        -   b5: reset các ô input vừa nhập dữ liệu
+        -   b6: gọi lại hàm renderInforStudent để in ra giao diện theo dữ liệu mới nhất
+        -   b7: cập nhật lại thông tin vào trong localStorage
+        -   b8: Gán hàm createStudent cho sự kiện onclick 
+
+    -   D -> delete (xóa học sinh)
+    -   cách làm:
+        -   b1: tạo hàm deleteStudent
+        -   b2: gán function deleteStudent cho button tương ứng và truyền index của học sinh muốn xóa
+        -   b3: truyền index của học sinh muốn xóa
+        -   b4: dùng hàm splice() để xóa học sinh ra khỏi danh sách
+        -   b5: cập nhật lại thông tin vào trong localStorage
+        -   b6: gọi lại hàm renderInforStudent để in ra giao diện theo dữ liệu mới nhất
+
+    -   S -> search (tìm kiếm học sinh)
+    -   cách làm:
+        -   b1: tạo function searchStudent
+        -   b2: lấy giá trị keyword người dùng vừa nhập
+        -   b3: sử dụng vòng lặp for để tìm kiếm
+            ->  Tên -> sử dụng includes để tìm kiếm xem tên học sinh có tồn tại hay không
+            ->  id  -> sử dụng === để tìm id của học sinh có bằng giá trị người dùng nhập không
+        -   b4: gọi lại hàm renderInforStudent và truyền vào giá trị biến result vào
+        -   b5: gán function searchStudent vào button tìm kiếm
+
+    -   U -> update (cập nhật học sinh)
+    -   cách làm:
+        -   b1: tạo function getAndShowInfoStudent
+        -   b2: Gán function getAndShowInfoStudent cho các button tương ứng và truyền id của học sinh muốn chỉnh sửa vào trong hàm
+        -   b3: Sau khi lấy được id thì sẽ tìm kiếm và lấy ra toàn bộ thông tin của học sinh đó
+        -   b4: Hiển thị thông tin lên các ô input tương ứng
+        -   b5: Show button "Cập nhật thông tin học sinh" và ẩn button "Tạo mới học sinh"
+        -   b6: Chuyển input nhập id thành mode là disabled (vô hiệu hóa input, không cho người dùng sửa đổi giá trị)
+        -   b7: Tạo function updateStudent
+        -   b8: Lấy các thông tin người dùng vừa chỉnh sửa
+        -   b9: Tìm kiếm vị trí của học sinh đó trong danh sách
+        -   b10: Cập nhật vào trong danh sách học sinh
+        -   b11: Gọi lại hàm renderInfoStudent để in ra dữ liệu mới nhất
+        -   b12: Reset input ()
+        -   b13: Ẩn button cập nhật, hiện button tạo mới
+        -   b14: Chuyển trạng thái disabled = false cho input nhập id
+        -   b15: cập nhật lại thông tin vào trong localStorage
+        -   b16: Gán function updateStudent cho button "Cập nhật thông tin học sinh"
+
+    -   

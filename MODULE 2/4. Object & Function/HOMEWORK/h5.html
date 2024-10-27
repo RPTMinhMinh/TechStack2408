@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>4. Cho bộ dữ liệu về users như sau: data.js
+        -Nhập vào 1 số n. Hãy tìm 1 user có id bằng n
+        -Nhập vào 1 chuỗi keyword. Hãy lấy ra email của các user có tên (first_name + last_name) chứa keyword.
+        -Đếm số lượng user có age > 50.
+        -Đếm số lượng user đã kết hôn và chưa kết hôn.
+        -Đếm số lượng user theo từng ngành nghề tương ứng.
+        Output:
+        {
+        "Dentist": 5,
+        "Developer": 13,
+        "Doctor": 6,
+        "Farmer": 8,
+        "Project Manager": 5,
+        "Teacher": 9,
+        "Worker" : 4
+        }</h3>
+
+    <script src="./data.js"></script>
+
+    <script>
+        let n = Number(prompt('Nhập vào 1 số n : '))
+
+        function timkiem(users, n) {
+            for (let element of users) {
+                if (element['id'] === n) {
+                    return element;
+                }
+            }
+            return null;
+        }
+
+        let search = timkiem(users, n)
+        console.log(search)
+
+        let keyword = prompt('Nhập vào 1 chuỗi keyword : ')
+
+        function email(users, keyword) {
+            for (let element of users) {
+                if (element['first_name'] === keyword || element['last_name'] === keyword) {
+                    return element['email'];
+                }
+            }
+            return null
+        }
+        let searchEmail = email(users, keyword);
+        console.log(searchEmail);
+
+        function age(users) {
+            let result = []
+            for (let element of users) {
+                if (element['age'] > 50) {
+                    result.push(element);
+                }
+            }
+            console.log('Có ' + result.length + ' user có age > 50')
+            return result;
+        }
+
+        console.log(age(users))
+
+        function isMarry(users) {
+            let isMarry = []
+            for (let element1 of users) {
+                if (element1['is_married'] === true) {
+                    isMarry.push(element1)
+                }
+            }
+            console.log('Có ' + isMarry.length + ' user đã kết hôn')
+            return isMarry;
+        }
+
+        function isnMarry(users) {
+            let isnMarry = []
+            for (let element2 of users) {
+                if (element2['is_married'] === false) {
+                    isnMarry.push(element2)
+                }
+            }
+            console.log('Có ' + isnMarry.length + ' user chưa kết hôn')
+            return isnMarry;
+        }
+
+        console.log(isMarry(users))
+        console.log(isnMarry(users))
+
+        function countJob(users) {
+            const output = {
+                "Dentist": 0,
+                "Developer": 0,
+                "Doctor": 0,
+                "Farmer": 0,
+                "Project Manager": 0,
+                "Teacher": 0,
+                "Worker": 0
+            }
+            for (let element of users) {
+                let nameJob = element.job;
+                if (output[nameJob] !== undefined) {
+                    output[nameJob]++; // Tăng giá trị tương ứng
+                }
+            }
+            console.log('data', output)
+        }
+        countJob(users)
+    </script>
+</body>
+
+</html>

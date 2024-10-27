@@ -1,0 +1,44 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <h3>aaaa</h3>
+
+    <script>
+        let numbers = [10,4,-7,9,100,3,-21,0,33];
+        let min = 10;
+        for(let number of numbers){
+            if(number < min){
+                min = number;
+            }
+        }
+        console.log(min);
+
+
+        let max = 10;
+        for(let number of numbers){
+            if(number > max){
+                max = number
+            }
+        }
+        console.log(max);
+
+
+        let sum = 0
+        for(let number of numbers){
+            sum += number;
+        }
+        console.log(sum)
+
+
+        let tbc = 0;
+        tbc = sum/numbers.length;
+        console.log(tbc)
+
+    </script>
+ </body>
+ </html>

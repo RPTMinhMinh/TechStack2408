@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="work" placeholder="Nhập công việc" />
+        <button id="create-work">Tạo công việc</button>
+    </div>
+    <div>
+        <h2>Danh sách công việc cần làm</h2>
+        <ul id="list-work">
+            <li>Đi chợ</li>
+            <li>Giặt quần áo</li>
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById('create-work').onclick = function(){
+            const newWork = document.getElementById('work').value;
+
+            console.log(newWork.trim())
+            if(newWork.trim() !== ''){
+                const newTagLi = document.createElement('li');
+                newTagLi.innerText = newWork.trim();
+                document.getElementById('list-work').appendChild(newTagLi);
+
+                newWork = '';
+            } else {
+                alert('Vui lòng nhập tên công việc');
+            }
+            
+        }
+    </script>
+</body>
+</html>

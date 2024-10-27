@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: flex; gap: 30px;">
+        <div>
+            <p>URL</p>
+            <input type="text" id="url">
+            <p>Chieu rong (width); Don vi: px</p>
+            <input type="text" id="width">
+            <p>Chieu cao (height); Don vi: px</p>
+            <input type="text" id="height">
+            <p>Bo goc; Don vi px</p>
+            <input type="text" id="br">
+            <p>Alt</p>
+            <input type="text" id="alt">
+        </div>
+        <div>
+            <img id="image" src="/MODULE 2/tom4.png" alt="Anh dep" width="100px" height="100px" style="border-radius: 0px; ">
+
+        </div>
+    </div>
+
+    <script>
+        const $url = document.getElementById('url');
+        const $image = document.getElementById('image');
+        $url.onchange = function(){
+            const $newURL = $url.value;
+            $image.src = $newURL
+        }
+
+        const $width = document.getElementById('width');
+        $width.oninput = function(){
+            const $newWidth = $width.value;
+            $image.style.width = $newWidth + 'px';
+        }
+
+        const $height = document.getElementById('height')
+        $height.oninput = function (){
+            const $newHeight = $height.value;
+            $image.style.height = $newHeight + 'px';
+        }
+
+        const $br = document.getElementById('br');
+        $br.oninput = function(){
+            const $newBR = $br.value;
+            $image.style.borderRadius = $newBR + 'px';
+        }
+    </script>
+
+
+</body>
+</html>

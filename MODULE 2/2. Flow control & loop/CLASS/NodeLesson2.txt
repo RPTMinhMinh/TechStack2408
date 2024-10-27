@@ -1,0 +1,118 @@
+câu lệnh điều kiện:
+
+chạy một khối lệnh tương ứng chạy khối lệnh tương ứng thỏa mãn ỏr không thỏa mãn
+-	if
+-	if-else
+- 	if-else lồng nhau
+- 	switch-case
+
+if là câu lệnh cơ bản để tạo câu điều kiện với JS
+các gtri truyền vào trong câu đkien không nhất thiết là boolean
+
+if-else trong JS giúp khai báo khối lệnh sẽ đc thực thi khi điêu điện if nhận giá trị sai
+
+if{
+
+} else if{
+
+} else{
+
+}
+
+switch-case 	là 1 cách rút gọn lệnh if else
+				có giá trị định sẵn
+				không dùng với >, <, ...
+				dùng trong trường hợp có nhiều if-else
+toán tử 3 ngôi:
+-	là cách ngắn gọn hơn để xử lý if-else
+-	có giá trị định sẵn
+-	có thể dùng <, >
+-	nếu từ 3 đkien trở lên thì nên dùng hẳn if-else
+
+Vòng lặp:
+-	for(let i =1; i <= 5; i++){
+	
+	}
+	giúp lặp qua dãy giá trị or tập hợp
+		lặp bới số lần biết trước
+		duyệt mảng
+		tìm kiếm
+
+
+VD:	for (let i = 1; i <= 5; i = i + 1) {
+	console.log(i);
+}
+
+Bước 1: Khởi tạo biến i với giá trị là 1
+Bước 2: So sánh giá trị i hiện tại với điều kiện
+Bước 3: 
+	+Nếu điều kiện trả về giá trị là true => console.log(i) sẽ được thực thi
+	+Nếu điều kiện trả về giá trị là false => vòng lặp sẽ kết thúc
+	+Hiện tại: i = 1 => i <= 5 => true
+	=> console.log(i) sẽ được thực thi, và kết quả in lên màn hình là 1
+Bước 4: Sau khi code trong vòng lặp được thực thi thì sẽ chạy đến
+statement 3, trong trường hiện tại là i = i + 1 (tăng i lên 1 đơn vị)
+Bước 5: Quay lại kiểm tra điều kiện 
+	+Nếu điều kiện trả về giá trị là true => console.log(i) sẽ được thực thi
+	+Nếu điều kiện trả về giá trị là false => vòng lặp sẽ kết thúc
+	+Hiện tại: i = 2 => i <= 5 => true
+	=> console.log(i) sẽ được thực thi, và kết quả in lên màn hình là 2
+Bước 3, 4, 5 sẽ được lặp lại đến khi điều kiện trả về là false thì vòng lặp sẽ dừng lại
+Các bước tiếp theo:
+	+) i = 3 => i <= 5 => true
+	=> console.log(i) sẽ được thực thi, và kết quả in lên màn hình là 3
+	+) i = 4 => i <= 5 => true
+	=> console.log(i) sẽ được thực thi, và kết quả in lên màn hình là 4
+	+) i = 5 => i <=5 => true
+	=> console.log(i) sẽ được thực thi, và kết quả in lên màn hình là 5
+	+) i = 6 => i <= 5 => false
+	=> vòng lặp sẽ kết thúc
+	
+	
+-	while(i <= 5){
+		console.log(i);
+		i++;
+	}
+	chỉ cho phép 1 câu lệnh để xác định khi nào vòng lặp kết thúc
+	tương tự vơi for khi chỉ có điều kiện
+	thực hiện ktra ngay từ đầu, nếu đkien là false, vòng lặp sẽ không thực hiện
+	
+	Trong ví dụ này:
+		let i = 1; 		// Khởi tạo biến i với giá trị ban đầu là 1.
+		while (i <= 5) { 	// Điều kiện kiểm tra, nếu i nhỏ hơn hoặc bằng 5, vòng lặp tiếp tục.
+    			console.log(i); // In giá trị của i.
+    			i++; 		// Sau mỗi vòng lặp, giá trị của i tăng lên 1.
+		}
+
+
+-	do{
+		console.log(i)
+		i++;
+	} while( i <= 5 )
+	giống vòng lặp while
+	do-while luôn thực hiện ít nhất một lần và sau đó ktra điều kiện để xác định liệu có tiếp tục thực hiện vòng lặp hay không
+	đc sử dụng khi muốn đảm bảo khối mã chạy ít nhất 1 lần sau đó ktra đkien để xác định có cần thực hiện tiếp hay không
+
+	Trong ví dụ này:
+		let i = 1;
+		do {
+  			console.log(i);
+    			i++; 		// Thực hiện khởi lệnh ít nhất một lần, 
+          				// giá trị của i tăng giá trị của i lên 1 sau mỗi vòng.
+		} while (i <= 5); 	// Kiểm tra điều kiện sau mỗi vòng lặp.
+					// Nếu điều kiện là true, vòng lặp tiếp tục.
+
+Lưu ý: 	nếu biết trước số lần lặp (VD: in ra 100 số) thì dùng FOR
+	nếu chưa biết số lần lặp (VD: in ra kết quả gtri xổ số) thì dùng WHILE, DO-WHILE
+	muốn code thực hiện ít nhất 1 lần : DO-WHILE
+	
+
+dùng prompt để nhập số từ màn hình:
+-	prompt mặc định là kiểu string
+-	cần ép kiểu (convert) để kiểu dữ liệu thành số
+
+
+break và continue:
+-	vòng lặp chạy cho đến khi điều kiện là false
+-	có thể dùng break để kết thúc sớm vòng lặp
+

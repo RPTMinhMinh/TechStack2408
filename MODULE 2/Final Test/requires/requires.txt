@@ -1,0 +1,83 @@
+- Cho dữ liệu về users: source: users.js. Mỗi user gồm: id, first_name, last_name, email, password.
+- Cho dữ liệu về posts: source: posts.js. Mỗi post gồm: id, title, content, image, created_at, updated_at, user_id.
+- Hãy thực hiện theo các yêu cầu dưới đây:
+
+1. Xây dựng chức năng đăng nhập
+-Nhập vào email, password từ bàn phím. Nếu không nhập đủ thông tin → In ra “Hãy nhập đầy đủ thông tin”. 
+Tìm trong dữ liệu users có user thỏa mãn email, password.
+    +Nếu có user, in ra màn hình “Xin chào” + <tên đầy đủ của user đó>
+    +Nếu không có user, in ra màn hình “Thông tin tài khoản không chính xác”.
+
+b1: tạo hàm login()
+b2: lấy thông tin người dùng vừa nhập từ username và password
+b3: nếu thông tin để rỗng -> Hãy nhập đầy đủ thông tin
+b4: duyệt mảng users để kiểm tra người dùng
+b5: nếu tồn tại -> Xin chào” + <tên đầy đủ của user đó
+    nếu không tồn tại -> Thông tin tài khoản không chính xác
+b6: reset ô input
+b7: gán hàm login() cho button tương ứng
+
+2. Xây dựng chức năng đăng ký
+-Nhập vào first_name, last_name, email, password từ bàn phím. Nếu không nhập đủ thông tin → In ra “Hãy nhập đầy đủ thông tin”. 
+Tìm trong dữ liệu users có user có email đã nhập.
+    +Nếu có user, in ra màn hình “Email này đã có tài khoản”.
+    +Nếu không có user, thêm vào dữ liệu user những thông tin đã nhập. Id của user mới là số tự tăng và không trùng với user khác. 
+
+b1: tạo hàm register()
+b2: lấy ra các giá trị người dùng vừa nhập từ 4 trường
+b3: nếu thông tin để rỗng -> Hãy nhập đầy đủ thông tin
+b4: duyệt mảng users để kiểm tra người dùng
+b5: nếu email tồn tại : Email này đã có tài khoản
+    nếu không : tạo object registerSuccess và thêm vào users
+    xử lý id
+b6: reset ô input
+b7: gán hàm register() vào button tương ứng và chuyển về trang login 
+
+3. Xây dựng chức năng xem danh sách users
+-Nhập vào keyword. Hãy in ra những users có họ và tên hoặc email chứa keyword. Mỗi users hiển thị id, họ và tên, email.
+    +Nếu keyword trống → In ra toàn bộ users
+
+b1: tạo hàm searchUsers
+b2: lấy ra giá trị của keyword vừa nhập
+b3: tạo mảng rỗng và biến check để kiểm tra
+b3: duyệ mạng users để kiểm tra người dùng
+b4: nếu có họ tên or email -> hiển thị id, họ và tên, email.
+    nếu không : không tìm thấy
+    nếu trống : In ra toàn bộ users
+b5: gán hàm searchUser cho button tương ứng
+
+4. Xây dựng chức năng xem danh sách posts
+-Hiển thị danh sách các posts, mỗi post bao gồm ID, title, ngày tạo, họ và tên người tạo.
+
+b1: tạo hàm showPost()
+b2: tạo chuỗi rỗng đại diện cho các câu lệnh html in lên màn hình
+b3: duyệt mảng posts
+    -> lấy ra thông tin từng posts
+    -> lấy ra thông tin user thông qua user_id;
+    -> tạo ra đoạn html tương ứng để hiển thị thông tin posts
+b4: Selector đến thẻ tbody và thay thể toàn bộ nd trong thẻ là đoạn html vừa tạo ra
+
+5. Xây dựng chức năng xem chi tiết 1 post.
+-Nhập vào ID của post. Hãy hiển thị thông tin của 1 post có ID tương ứng: ID, tiêu đề, nội dung, link ảnh, tên người tạo, ngày tạo, ngày sửa đổi.
+
+b1: tạo hàm detailPost()
+b2: lấy ra giá trị của keyword vừa nhập
+b3: tạo mảng rỗng và biến check để kiểm tra
+b4: duyệt mảng posts
+    -> nếu có id : hiển thị
+    -> nếu không có : không tìm thấy
+    -> để trống : hiển thị tất cả
+b5: gán hàm cho button tương ứng
+
+6. Xây dựng chức năng tìm kiếm post theo user.
+-Nhập vào email của 1 user. Hãy tìm kiếm các posts của user đó và hiển thị dưới dạng danh sách.
+
+
+b1: tạo fuction searchPost()
+b2: lấy ra giá trị của keyword vừa nhập
+b3: tạo mảng rỗng và biến check để kiểm tra
+b4: duyệt mảng posts
+    -> nếu có id : hiển thị
+    -> nếu không có : không tìm thấ
+    -> để trống : hiển thị tất cả
+b5: gán hàm cho button tương ứng

@@ -1,0 +1,44 @@
+1. lập trình đồng bộ là gì?
+
+setTimeout(functionA, time)
+-   time đơn vị là miliseconds
+-   functionA là function đc thực thi
+
+setInterval(functionA, time)
+-   cứ sau 1 chu kì sẽ thực hiện function 1 lần
+
+
+-   ltdb là lập trình chạy theo tuần tự, lệnh trước chạy trước và lệnh sau chạy sau
+-   ltbdb là lập trình chạy k theo thứ tự mà chạy cùng lúc với nhau, câu lệnh chạy trước có thể kết thúc sau câu lệnh chạy sau
+-   bất đồng bộ có 2 dạng:
+        đơn luồng: chỉ chạy trên 1 luồng duy nhất
+        đa luồng: có thể phân chia luồng để chạy nhiều câu lệnh cùng một lúc
+-   ltbdb giải quyết vấn đề bị blocking của code
+-   js là ngôn ngữ lập trình bất đồng bộ, nhưng không phỉa tác vụ nào cũng chạy theo kiểu bất đồng bộ
+-   js là ngôn ngữ lập trình đơn luồng
+
+
+2. Event loop trong js:
+
+-   execution context là môi trường hàm thực thi, nó chứa code của hàm và và tất cả thứ liên quan mà hàm cần dùng
+-   execution context có 3 loại:
+        Global context
+        Function context
+        Eval context
+
+-   stack chạy theo cơ chế first-in last-out
+-   queue là last-in first-out
+-   callstack là cấu trúc LIFO (xử lý đồng bộ)
+-   task queue (callback queue) là FIFO
+-> ngoài callback queue còn có job queue với độ ưu tiên cao hơn callback queue
+-   WebAPI (xử lý bất đồng bộ) do browser thực thi và chia thành các thread cho mỗi nhiệm vụ. 
+-   js là đơn luồng nhưng WebAPI là đa luồng do trình duyệt thực thi
+-   event loop là vòng lặp vô tận của V8 engine 
+-   stack ovelflow là tình trạng mà execution context bị đầy 
+-   hàm foo() thực hiện lại chính nó là không cần đk dừng lại, nên khi trong callstack toàn foo() foo() foo() nhiều tới mức làm đầy stack => trình duyệt báo lỗi Range Error
+
+3. các cách xử lý bất đồng bộ trong js:
+
+-   callback 
+-   setTimeout(callback, time)
+-   promise là đối tượng đại diện cho kết quả hành động nào đó sẽ hoàn thành trong tương lai, kết quả trả về sẽ là resolve nếu thành công và reject nếu thất bạix

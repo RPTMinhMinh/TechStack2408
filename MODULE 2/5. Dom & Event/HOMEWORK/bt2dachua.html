@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: flex">
+        <div>
+            <div>
+                <label>URL</label>
+                <input type="text" id="url" placeholder="Nhập url của ảnh" />
+            </div>
+            <div>
+                <label>Chiều rộng</label>
+                <input type="text" id="width" placeholder="Nhập chiều rộng của ảnh" />
+            </div>
+            <div>
+                <label>Chiều cao</label>
+                <input type="text" id="height" placeholder="Nhập chiều cao của ảnh" />
+            </div>
+            <div>
+                <label>Bo góc</label>
+                <input type="text" id="radius" placeholder="Nhập bo góc của ảnh" />
+            </div>
+            <div>
+                <label>Alt</label>
+                <input type="text" id="alt" placeholder="Nhập alt của ảnh" />
+            </div>
+        </div>
+        <div style="margin-left: 50px;">
+            <img 
+                id="image"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGHNvA8j26-L1GlzL0p1VUtbjuJEVPMVw_bg&s" 
+                style="width: 100px; height: 100px;"
+            />
+        </div>
+    </div>
+    <script>
+        const $inputURL = document.getElementById('url');
+        const $inputWidth = document.getElementById('width');
+        const $inputHeight = document.getElementById('height');
+        const $inputRadius = document.getElementById('radius');
+        const $inputAlt = document.getElementById('alt');
+        const $image = document.getElementById('image');
+
+        $inputURL.oninput = function () {
+            const newURL = $inputURL.value;
+            $image.src = newURL;
+        }
+
+        $inputWidth.oninput = function(){
+            const newWidth = $inputWidth.value;
+            $image.style.width = newWidth + 'px';
+        }
+
+        $inputHeight.oninput = function(){
+            const newHeight = $inputHeight.value;
+            $image.style.height = newHeight + 'px';
+        }
+
+        $inputRadius.oninput = function(){
+            const newRadius = $inputRadius.value;
+            $image.style.borderRadius = newRadius + 'px';
+        }
+
+        $inputAlt.oninput = function(){
+            const newAlt = $inputAlt.value;
+            $image.alt = newAlt;
+        }
+
+        // Example:
+        // $inputURL.value = 'https://example.com/image.jpg';
+        // $inputWidth.value = '200';
+        // $inputHeight.value = '150';
+        // $inputRadius.value = '5';
+        // $inputAlt.value = 'Example Image';
+
+        // Note:
+        // - The input fields should be validated to ensure that they are not empty and contain valid numbers.
+        // - The image should be centered within its container, and the container should have a border.
+        // - The image should have a border radius specified in pixels.
+        // - The alt attribute should be set to the value entered in the alt input field.
+        // - The image should be loaded asynchronously using JavaScript.
+        // - The
+    </script>
+</body>
+</html>

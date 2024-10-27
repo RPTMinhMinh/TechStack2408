@@ -1,0 +1,65 @@
+xem lại bài tập chữa, code lại
+
+DOM và Events
+
+1. DOM là gì
+
+ta có các DOM element dc tổ chức theo dạng cây
+-   Node: là phần tử bất kì trong cây
+-   Node cha: là node nằm trên và cùng nhánh hiện tại
+-   Node con: nằm dưới thuộc nhánh 
+-   
+
+-   với dom:
+    -   thay đổi toàn bộ element HTML trên trang web
+    -   thay đổi thuộc tính của các thẻ
+    -   thay đổi style của tất cả các thẻ
+    -   xóa/thêm các html elements trên web
+    -   xử lý các events trong HTML
+
+-   trong dom, Document là object đại diện cho trang web.thực hiện:
+    -   tìm kiếm elements trong document
+    -   thay
+
+
+-   TÌM KIẾM ELEMENTS TRONG DOCUMENT:
+    -    document.getElementById(): tìm element đầu tiên trong trang web với ID tương ứng.
+    -    document.getElementsByTagName(): tìm tất cả các elements trong trang web theo tên thẻ.
+    -    document.getElementsByClassName(): tìm tất cả các elements trong trang web có chứa class tương ứng.
+    -    document.querySelector(selector): tìm element đầu tiên trong trang web thỏa mãn được theo CSS Selector.
+    -    document.querySelectorAll(selector): tìm tất cả các elements trong trang web dựa theo CSS Selector.
+
+-   THAY ĐỔI GIÁ TRỊ/THUỘC TÍNH:
+    -   element.innerHTML = new_html_content: thay đổi nội dung bên trong element.
+    -   element.innerText = new_html_content: thay đổi nội dung văn bản bên trong element.
+    -   element.attribute = new_value: thay đổi giá trị một thuộc tính của element.
+    -   element.setAttribute(attribute, value): thay đổi giá trị một thuộc tính của element.
+    -   element.style.attribute = new_value: thay đổi style của element.
+    -   element.getAttribute(attribute): lấy giá trị của một thuộc tính của element.
+    -   element.removeAttribute(attribute): xóa một thuộc tính của element.
+
+-   THÊM OR XÓA ELEMENTS:
+    -   document.createElement(): Tạo mới một element.
+    -   document.removeChild(): Xóa một element là node con của một element khác.
+    -   document.appendChild(): Thêm một element con vào sau cùng của một element khác.
+    -   document.replaceChild(): Thay thế node con bằng một node con khác.
+
+-   THAO TÁC VỚI CLASS ELEMENT:
+    -   element.classList.add('class-name'); thêm một class vào element.
+    -   element.classList.remove('class-name'); xóa một class trong element.
+    -   element.classList.toggle('class-name'); nếu trong element có class-name rồi thì sẽ xóa đi, nếu chưa có class-name thì sẽ thêm vào.
+
+2. Events
+
+-   là các sự kiện xảy ra trên ứng dụng web
+-   chạy 1 đoạn code bất kì khi click vào 
+-    một số events:
+    -   click chuột
+    -   trang web tải thành công
+    -   bức ảnh tải thành công
+    -   khi di chuột qua HTML elements
+    -   giá trị của input bị thay đổi
+    -   một form đc submit
+    -   gõ một phím trên bàn phím
+-   trong tất cả các sự kiện của HTML, cta đều có thể sd JS để can thiệp và thực hiện một logic bất kì
+-   để xử lý sự kiện với JS là sử dụng thuộc tính của các thẻ HTML. các thẻ HTML đều có thuộc tính onClick(), onChange(). cta có thể chuyển thẳng một function vào bên trong các thuộc tính để chạy một đoạn logic tương ứng khi event xảy ra

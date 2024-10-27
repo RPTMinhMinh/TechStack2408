@@ -1,0 +1,213 @@
+1. object là gì
+
+-	object(đối tượng) là cấu trúc dữ liệu chứa nhiệu giá trị 
+-	tổ chức dưới dạng key-value
+-	đối tượng = thuộc tính (property) + phương thức (method)
+-	sử dụng trong OOP
+
+2. khai báo và khởi tạo
+
+	const/var/let <Tên biến> = {
+		<key1>: <value1>,
+		<key2>: <value2>,
+		<key3>: <value3>,
+		...
+	}
+	
+VD:
+Cách 1:
+	const obj1 = {}
+	const obj2 = {
+		name: 'T3H',
+		address: 'HaNoi'
+	}
+Cách 2:
+	const obj3= new Object();
+	const obj4 = new Object({
+		name: 't3h',
+		address: 'HaNoi'
+	})
+	
+3. các thao tác hay gặp trên object:
+	get
+	set
+	delete
+	duyệt object
+	
+-	truy xuất và sd thuộc tính (get)
+		<tên object>.key
+		<tên object>['key']
+	cách 2 dùng cho mọi trường hợp (key là số, chuỗi,...)
+
+-	thêm or cập nhật (set)
+	nếu key đã tồn tại thì cập nhật
+	nếu key chưa tồn tại thì thêm mới
+		<tên object>.key = 'abc';
+		<tên object>['key'] = 'abc';
+- 	delete:
+	xóa key
+		delete <tên object>['key']
+-	duyệt object:
+	sử dụng for in
+		for(let key in object){
+			...
+		}
+VD:
+
+	for (let a in obj2){
+		console.log(a);			//duyệt key trong object
+		console.log(obj2[a])	//duyệt từng phần tử trong key
+		console.log('-------')
+	}
+	
+	Object.keys(<tên object>): trả về toàn bộ key trong object dươí dạng array
+	Object.values(<tên object>): trả về toàn bộ value trong object dưới dạng array
+	<tên object>.hasOwnProperty(key): kiểm tra xem một key có tồn tại trong object hay không (trả về true or false)
+	
+4. So sánh:
+	KIỂU DỮ LIỆU CƠ BẢN:
+		-	string: lưu trữ dãy ký tự
+		-	number: lưu trữ số
+		-	boolean: lưu trữ giá trị logic (true or false)
+		-	undefined: biến không đc khởi tạo or có giá trị không xác định
+		-	null: đại diện cho giá trị rỗng or không tồn tại
+	KIỂU DỮ LIỆU THAM CHIẾU:
+		-	object: dùng để lưu trữ các thuộc tính và phương thức
+		-	array: dùng để lưu trữ danh sách các giá trị
+		-	function: đối tượng hàm
+	SAO CHÉP:
+		-	cơ bản: sao chép bằng giá trị
+		-	tham chiếu: sao chép bằng tham chiếu
+
+		VD:
+			const a = [9]
+			const b = [9]
+			console.log(a == b)		//false
+			console.log(a === b)	//false
+			=> a và b lưu trữ địa chỉ ô nhớ trên thanh ram chứ k phải giá trị(value)
+
+			const a = [9]
+			const b = a
+			console.log(a == b)		//true
+			console.log(a === b)	//true
+
+	SO SÁNH:
+		-	so sánh bằng giá trị
+		-	só sánh bằng tham chiếu (địa chỉ vùng nhớ)
+	LƯU TRỮ:
+		-	lưu trữ trực tiếp giá trị
+		-	lưu trữ địa chỉ vùng nhớ của giá trị
+	KIỂM TRA KIỂU DỮ LIỆU:
+		-	sử dụng typeof
+		-	sử dụng instanceof or các phương thức kiểm tra khác
+	MUTABLE/IMMUTABLE:
+		-	immutable (không thể thay đổi giá trị)
+		-	mutable (có thể thay đổi giá trị)
+5. function
+
+-	là khối mã đc đặt tên và có thể tái sdung
+-	dùng để gói 1 đoạn code có thể tái sử dụng nhiều lần. 
+-	code function k đc chayj ngay lập tức mà đc chạy khi ta gọi tói nó
+
+	function functionName(parameter1, parameter2, ...parameterN) {
+		// Khởi mã của hàm
+		// Các lệnh và logic thực hiện một công việc cụ thể
+		return result; // Trả về một giá trị nếu cần
+}
+
+	Trong đó:
+		functionName là tên của hàm.
+		parameter1, parameter2, ... là các tham số (parameters) mà hàm có thể nhận.
+		// Khởi mã của hàm là nơi đặt các lệnh và logic của hàm.
+		return result; là cách hàm trả về một giá trị (nếu cần).
+-	một function chạy với các tham số đầu vào khác nhau, nhận giá trị ở thời điểm bắt đầu chạy
+-	tham số truyền vào nằm trong cặp ngoặc () của function
+-	khi gọi function, chúng ta truyền thêm đối số (các giá trị truyền vào ở thời điểm function đcc thực thi)
+	VD:
+		// Định nghĩa hàm
+	function add(a, b) {
+		let sum = a + b;
+		return sum;
+	}
+
+	// Gọi hàm và lưu kết quả vào biến result
+	let result = add(3, 5);
+
+	// In kết quả ra màn hình
+	console.log(result); // 8
+
+	// Hàm add có hai tham số a và b, thực hiện phép cộng
+	// và trả về tổng. Sau đó, hàm được gọi với 3 và 5,
+	// vì kết quả là 8. Hàm giúp tái sử dụng mã tạo ra các
+	// khối mã có thể được gọi lại từ nhiều nơi khác nhau trong
+	// chương trình JavaScript.
+
+	Khi bạn cần tính toán với dữ liệu: Nếu hàm của bạn thực hiện một phép toán hoặc xử lý dữ liệu, bạn cần truyền các giá trị (đối số) mà hàm đó sẽ sử dụng.
+
+		function sum(a, b) {
+			return a + b;
+		}
+		
+		let total = sum(10, 20); // Truyền 10 và 20 vào hàm
+		console.log(total); // Kết quả: 30
+
+	Khi bạn cần tùy chỉnh hành vi của hàm: Đối số cho phép bạn thay đổi cách mà hàm hoạt động, ví dụ như truyền vào các tham số khác nhau để nhận được kết quả khác nhau.
+
+		function greet(name) {
+			return `Xin chào, ${name}!`;
+		}
+
+		console.log(greet("Monica")); // Kết quả: "Xin chào, Monica!"
+		console.log(greet("John")); // Kết quả: "Xin chào, John!"
+
+
+	Khi bạn muốn tạo ra mã linh hoạt hơn: Bằng cách truyền đối số, bạn có thể tái sử dụng cùng một hàm với nhiều đầu vào khác nhau mà không cần viết lại mã.
+
+		function calculateArea(length, width) {
+			return length * width;
+		}
+
+		console.log(calculateArea(5, 10)); // Kết quả: 50
+		console.log(calculateArea(7, 3)); // Kết quả: 21
+
+
+	Khi hàm yêu cầu tham số bắt buộc: Một số hàm có thể yêu cầu bạn phải truyền đối số để thực hiện công việc của chúng. Nếu không truyền, có thể sẽ xảy ra lỗi.
+
+		function divide(x, y) {
+			if (y === 0) {
+				return "Không thể chia cho 0!";
+			}
+			return x / y;
+		}
+
+		console.log(divide(10, 2)); // Kết quả: 5
+		console.log(divide(10, 0)); // Kết quả: "Không thể chia cho 0!"
+
+
+-	khi gặp từ khóa return, hàm sẽ dừng lại ngay lập tức (giống break)
+-	function chỉ trả về một giá trị duy nhất, tuy nhiên có thể trả về một array or object có chứa nhiều giá trị bên trong
+-	tổng quan về function:
+		function testFunc1() {
+			// no input, no output
+			console.log('no input, no output');
+		}
+
+		function testFunc2(name, age) {
+			// 2 inputs, no output
+			console.log('name: ', name);
+			console.log('age: ', age);
+		}
+
+		function testFunc3() {
+			// no input, 1 output
+			return 'no input, 1 output';
+		}
+
+		function testFunc4(name, age) {
+			// 2 inputs, 1 output
+			return 'This is ' + name + ' ' + age;
+		}
+
+-	lợi ích:
+		tái sử dụng
+		sử dụng cho nhiều thamm số khác nhau và tạo ra nhiều kết quả khác nhau

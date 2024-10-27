@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="addJob">
+        <button id="submit">Add Job</button>
+    </div>
+    <div>
+        <h3>DANH SACH CONG VIEC CAN LAM:</h3>
+        <ul id="list">
+            <li class="list-item">Di choi</li>
+            <li class="list-item">lam bai tam</li>
+            <li class="list-item">giat quan ao</li>
+        </ul>
+    </div>
+
+    <script>
+        const $addJob = document.getElementById('addJob');
+        const $submit = document.getElementById('submit')
+
+        $submit.onclick = function(){
+            let $tagLi = document.createElement('li');
+            $tagLi.innerText = $addJob.value;
+            document.querySelector('ul#list').appendChild($tagLi)
+        }
+        
+
+    </script>
+</body>
+</html>
