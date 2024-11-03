@@ -1,0 +1,121 @@
+1. giới thiệu về typescript
+
+A.   cài đặt Node.js và npm
+    -   node.js: tải node.js từ trang chủ Node.js  
+    -   npm: quản lý các gói (packages) và thư viện
+    -   khi cài node.js sẽ có kèm cả npm luôn
+    -   kiểm tra bằng mở cmd:   
+        -   node -v
+        -   npm -v
+
+B.   cài đặt typescript
+    -   cài đặt typescript  
+        -   npm install -g typescript (npm i -g typescript)
+    -   kiểm tra phiên bản typescript   
+        -   tsc -v
+    -   Lưu ý:
+        -   mở bằng cmd chứ không phải powershell
+            -   chuột phải vào folder và click open in terminal
+            -   tô đen đường link folder và gõ cmd
+            -   nếu đã cài đặt git, mở bằng Git Bash
+
+C.   tạo dự án typescript (nếu đã cài đặt nodeJS thì không cần phải làm bước 1 & 2 nữa)    /*/
+    -   vào tạo bằng tay    
+    -   truy cập vào folder bằng cmd
+    -   khởi tạo dự án với npm: tạo ra file package.json (quản lý các phụ thuộc của dự án)
+        -   npm init -y
+
+D.   thiết lập Typescript Configuration  /*/
+    -   khởi tạo tsconfig.json (tệp cấu hình thiết lập các tùy chọn biên dịch)  
+        -   tsc --init
+    -   chỉnh sửa tệp tsconfig.json 
+        {
+            "compilerOptions": {
+                "target": "es2016",
+                /* Modules */
+                "module": "commonjs",
+                "rootDir": "./src",
+                "outDir": "./dist",
+                "esModuleInterop": true,
+                "forceConsistentCasingInFileNames": true,
+                "strict": true,
+                "skipLibCheck": true
+            },
+            "include": ["src"],
+            "exclude": ["node_modules"]
+            }
+
+E.   viết mã TypeScript  /*/
+    -   tạo thư mục src
+    -   tạo tệp typescript (index.ts)
+
+F.   biên dịch và chạy mã    /* 1 /
+    -   biên dịch ts thành js
+        -   tsc
+    -   biên dịch xong sẽ tạo ra thư mục dist chứa file js đã biên dịch 
+    -   chạy mã js sử dụng Node.js bằng cmd (đường dẫn tính từ trong phần link ở cmd):
+        -   node dist/index.js
+
+G.   thiết lập mtr phát triển với vs
+    -   JavaScript and TypeScript Nightly
+
+H.   sử dụng ts với các công cụ phát triển   /* 2 /
+    -   thiết lập tự động biên dịch tsc-watch (cục bộ):
+        -   npm install tsc-watch
+    -   thêm script vào package.json
+        -   "start": "tsc-watch --onSuccess \"node dist/index.js\""
+    -   chạy dự án 
+        -   npm start
+
+2. so sánh ts với js
+-   kiểu dữ liệu:
+-   biên dịch và thực thi
+-   hỗ trợ IDE và công cụ 
+-   Tính năng ngôn ngữ
+-   Quản lý mã nguồn
+-   Hỗ trợ cộng đồng và thư viện
+-   Học tập và sử dụng
+
+3. cú pháp cơ bản của ts
+-   Đc mở rông từ js với các tính năng bổ sung như kiểu dữ liệu tĩnh , class , interface , ...
+
+A. khai báo biến với let và const
+
+-   let: khai báo với let có phạm vi khối
+-   const: khai báo biến với const để chỉ định giá trị không thay đổi (cần gán giá trị ngay lúc khai báo)
+
+B. kiểu dữ liệu và chú thích kiểu (type Annotation)
+
+-   chú thich kiểu là cách chỉ định kiểu dữ liệu cho các biến, tham số của hàm và giá trị trả về của hàm
+-   lợi ích:
+    -   kiểm tra kiểu tĩnh: có thể kiểm tra và báo lỗi ngay lập tức
+    -   tự động tái cấu trúc
+    -   tự động hoàn thiện
+-   vd:
+    let username: string = "alice"  //kieu string
+    let age: number = 18            //kieu number
+    let isActive: boolean = true    //kieu boolean
+    let hobbies: string[] = ["reading" , "gaming"]  //kieu chuoi
+    function greet(name: string): string{
+        return 'Hello, ${name}';
+    }
+    function add(a: number, b: number): number{
+        return a + b;
+    }
+    function logMessage(message: string): void{
+        console.log(message);
+    }
+
+C. kiểu dữ liệu cơ bản
+-   String : đại diện cho chuỗi ký tự
+-   Number : đại diện cho số nguyên , số thưucj
+-   Boolean : 2 giá trị true , false
+-   Array : lưu trữ danh sách các giá trị cùng kiểu
+-   Tuple : lưu trữ nhiều giá trị vói kiểu dữ liệu khác nhau trong 1 biến
+-   Enum : tạo ra các tập hợp các hằng số có tên
+-   Any : cho phép chứa bất kỳ giá trị nào
+-   Unknown : cho phép chứa bất kỳ giá trị nào nhưng đòi hỏi kiểm tra kiểu trước khi thực hiện
+-   Never : biểu thị các giá trị không bao giờ xảy ra
+-   Void : sử dụng cho các hàm không trả về giá trị
+-   Null và Undefined : 
+-   Object : đại diện cho các giá trị không phải kiểu nguyên thủy như string , bigint , boolean , symbol , null , undefined

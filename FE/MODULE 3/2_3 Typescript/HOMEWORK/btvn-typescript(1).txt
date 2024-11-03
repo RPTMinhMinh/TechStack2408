@@ -1,0 +1,48 @@
+Bài 1: Quản lý danh sách sinh viên
+Tạo một chương trình TypeScript để quản lý danh sách sinh viên với các yêu cầu sau:
+1. Định nghĩa một type Student với các thuộc tính:
+	- id: number (mã sinh viên)
+	- name: string (tên sinh viên)
+	- age: number (tuổi)
+	- grades: array of numbers (điểm các môn)
+2. Tạo một mảng students kiểu Student[] và thêm một số sinh viên mẫu.
+3. Viết hàm getAverageGrade nhận vào mã sinh viên và tính điểm trung bình cho sinh viên đó.
+4. Viết hàm findStudentByName nhận vào tên và tìm sinh viên có tên đó trong mảng.
+5. Viết hàm addStudent để thêm sinh viên mới vào danh sách.
+6. Viết hàm removeStudentById để xoá sinh viên khỏi danh sách theo mã sinh viên.
+
+
+Bài 2: Quản lý sản phẩm trong cửa hàng
+Tạo một ứng dụng TypeScript để quản lý sản phẩm với các yêu cầu sau:
+1. Định nghĩa một type Product với các thuộc tính:
+	- id: number (mã sản phẩm)
+	- name: string (tên sản phẩm)
+	- price: number (giá sản phẩm)
+	- stock: number (số lượng trong kho)
+2. Tạo một mảng products kiểu Product[] chứa một số sản phẩm mẫu.
+3. Viết hàm addProduct để thêm một sản phẩm mới vào danh sách.
+4. Viết hàm findProductById để tìm sản phẩm theo mã sản phẩm.
+5. Viết hàm updateStock nhận vào mã sản phẩm và số lượng cần thêm/xoá và cập nhật lại stock của sản phẩm.
+6. Viết hàm calculateTotalInventoryValue để tính tổng giá trị tồn kho của tất cả sản phẩm.
+
+Bài 3: Quản lý sách trong thư viện
+1. Định nghĩa một type Book với các thuộc tính:
+	- id: number (mã sách)
+	- title: string (tên sách)
+	- author: string (tác giả)
+	- isAvailable: boolean (tình trạng sách: có sẵn hay không)
+2. Tạo một mảng library kiểu Book[] và thêm một số sách vào thư viện.
+3. Viết hàm checkOutBook nhận vào mã sách và đánh dấu isAvailable thành false nếu sách có sẵn.
+4. Viết hàm returnBook để đánh dấu sách trở về trạng thái có sẵn (isAvailable là true).
+5. Viết hàm findBooksByAuthor để tìm tất cả các sách của một tác giả cụ thể.
+6. Viết hàm listAvailableBooks để trả về danh sách các sách hiện có sẵn trong thư viện.
+
+Bài 4: Phân tích dữ liệu điểm thi của học sinh
+1. Định nghĩa một interface ScoreData với các thuộc tính:
+	- studentId: number (mã sinh viên)
+	- subject: string (tên môn học)
+	- score: number (điểm)
+2. Tạo một mảng scores kiểu ScoreData[] để chứa dữ liệu điểm của các học sinh.
+3. Viết hàm calculateAverageScoreBySubject nhận vào tên môn học và tính điểm trung bình của môn đó.
+4. Viết hàm getTopScorerBySubject nhận vào tên môn học và trả về học sinh có điểm cao nhất trong môn đó.
+5. Viết hàm getStudentScores nhận vào mã sinh viên và trả về toàn bộ điểm của sinh viên đó theo từng môn học.

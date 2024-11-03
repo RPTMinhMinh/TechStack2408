@@ -1,0 +1,46 @@
+1. ECMA & ES6 là gì ?
+
+-   ES6 được coi là một tập hợp các kỹ thuật nâng cao của js, là phiên bản mới nhất của chuẩn ECMA2016
+
+2. Tại sao cần dùng ES6 ?
+
+-   Sử dụng ES6 vì:
+    -   cú pháp dễ đọc và ngắn gọn
+    -   Arrow function
+    -   Classes
+    -   Destructuring Assignment
+    -   Template Literals
+    -   Default Parameters
+    -   Modules
+    -   Let và const
+    -   Promises
+    -   Iterators và generators
+=> có thể coi ES6 là tiêu chuẩn để đồng bộ code giữa các thành viên trong team
+=> tăng cường tính hiện đại, dễ đọc và linh hoạt của mã nguồn Js, đôngf thới mang lại tính năng mạnh mẽ và tiện ích mới cho người lập trình
+
+3. Các chức năng co strong ES6
+
+-   một số chức năng chính của ES6:
+    -   Default parameters
+        -   cho phép gán giá trị mặc định cho tham số của 1 hàm trong trường hợp tham số đó không được truyền vào hoặc truyền vòa undefined
+    -   Template literals
+        -   
+    -   Destructuring Assignment
+        -   trong mảng
+        -   trong object
+    -   Enhance object literals:
+        -   
+        -   
+        -   
+        -   
+        -   
+        =>  
+    -   Arrow function
+        -   
+    -   Promises
+        -   
+    -   Block-Scoped Constructs Let and Const 
+        -   
+    -   Classes
+    -   Modules:
+        -   
